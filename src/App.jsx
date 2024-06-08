@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'; // Import necessary hooks from React
 import TodoInput from './components/TodoInput'; // Import the TodoInput component
 import TodoList from './components/TodoList'; // Import the TodoList component
+import Header from './components/Header'; // Import the Header component
 
 // Main App component
 function App() {
@@ -40,7 +41,7 @@ function App() {
   }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <>
+    <><Header></Header>
       <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos} />
       {/* Render TodoInput component with necessary props */}
       <TodoList handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todos={todos} />
